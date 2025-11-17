@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas</title>
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Nicholas Ury</h1>
+    <nav>
+      <ul>
+        <li><a href="#quem">Sobre mim</a></li>
+        <li><a href="#atividade">Atividades extracurricular</a></li>
+        <li><a href="#fotos">Minhas Atividades em Fotos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Conteúdo -->
+  <main>
+    <section id="quem">
+      <h2>Um  pouco sobre mim</h2>
+      <p>
+      Me chamo Nicholas Ury, tenho 16 anos e sou estudante do ensino médio no Centro de Ensino Médio 12 de Ceilândia. Tenhos dois cachorros, um macho da raça Yorkshire chamado Bethoven e uma fêmea da raça vira-lata chamada lilica. Desde pequeno possuo uma certa "paixão" por tecnologia, jogos e coisas de mundinho nerd como muitas pessoas dizem, porém depois dos 11 anos de idade comecei a usar os jogos para distrair a cabeça de problemas pessoais. Meu genêro favorito de games é o de ação ou luta, pois me lembra minha infância e me traz certa nostalgia. Gosto muito de ouvir música também, meus artistas favoritos são Matuê, Major RD e Baco Exu do Blues. Meu genêro músical é bem variado, ouço de tudo, desde MPB até Rock, mas o meu favoito é o trapp por conta dos meus artistas favoritos. Sobre meu futuro, desejo trabalhar na área de T.I como desenvolvedor de software ou algo assim, pretendo fazer faculdade sobre esse assunto na UnB.
+      </p>
+    </section>
+
+  <section id="atividade">
+      <h2>Atividades Extracurriculares</h2>
+      <p>
+      Sobre minhas atividades extracurriculares, participo de um curso de programação de que fica na comercial norte, nesse curso apreendo sobre varis linguagens de programação, aprendo também sobre cibersegurança um ponto muito importante nos dias de hoje. Além desse curso eu luto jiu-jitsu e capoeira na instituição Fio Da Navalha que fica situada na Samambaia Sul, pratico artes marciais desde os 10 anos de idade porem dei uma pausa entre os 12 e os 16 por conta de problemas pessoais. Também participo do grupo Si Bobiá A Gente Pimba que também fica na Samambaia sul. Esse grupo é voltado para a cultura brasileira de quadrilhas juninas e passos poppulares como frevo, maculelê, xaxado entre outros.
+      </p>
+    </section>
+
+  <section id="fotos">
+  <h2>Minhas Atividades em Fotos</h2>
+
+  <div class="galeria">
+    <img src="jao_e_eu.jpeg" alt="Capoeira">
+    <img src="WhatsApp Image 2025-11-17 at 01.34.43.jpeg">
+    <video src="ca_poeira_individual.mp4" controls autoplay muted loop></video>
+    <img src="jiu.jpeg" alt="jiu-jitsu">
+  </div>
+
+    <!-- Lightbox (janela de imagem expandida) -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+
+
+</section>
+
+
+    
+  </main>
+
+
+
+<script>
+  // Seleciona elementos
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox .close");
+
+  // Quando clicar em qualquer imagem da galeria → abrir
+  document.querySelectorAll(".galeria img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  // Fechar ao clicar no X
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Fechar ao clicar no fundo
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto escolar desenvolvido por Nicholas Ury © 2025</p>
+  </footer>
+</body>
+</html>
